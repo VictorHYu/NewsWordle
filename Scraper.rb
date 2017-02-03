@@ -3,8 +3,10 @@ require 'Nokogiri'
 require 'JSON'
 require 'Pry'
 require 'csv'
+require 'magic_cloud'
 
 $titles_array = []
+$frequency = Hash.new(0)
 
 def parse_selected_page (pageURL)
     if (pageURL == 'https://www.reddit.com/r/news/')
@@ -55,5 +57,16 @@ for item in pages_array
     parse_selected_page(item)
 end
 
+for item in $titles_array
+    words = item.split(' ')
+    words.each { |word| $frequency[word.downcase] += 1 }
+end
+
 Pry.start(binding)
+
+#words = [ ["hello", 50], ["my",20], ["name",30], ["is", 40], ["victor", 50]]
+#cloud = MagicCloud::Cloud.new(words, palette: :category20, rotate: :square)
+#img = cloud.draw(1000,1000)
+
+#img.write("./output.jpg")
 
