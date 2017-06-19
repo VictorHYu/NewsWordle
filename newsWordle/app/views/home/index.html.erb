@@ -1,0 +1,11 @@
+<div id = "titleWrapper">
+    <h1 id = "title">News Wordle</h1>
+</div>
+
+<div id = "imgWrapper">
+    <img id = "wordleImage" src = "./assets/output.jpg" alt = "Currently Unavailable..."> </img>
+</div>
+
+<div id = "buttonWrapper">
+    <%= button_to "Refresh Wordle", home_load_path, :id => "refreshButton", :method => :post %>
+</div>
