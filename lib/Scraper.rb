@@ -1,6 +1,6 @@
-require 'HTTParty'
-require 'Nokogiri'
-require 'JSON'
+require 'httparty'
+require 'nokogiri'
+require 'json'
 require 'magic_cloud'
 
 class Scraper

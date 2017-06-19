@@ -58,6 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty', '~> 0.14.0'
 gem 'nokogiri', '~> 1.8.0'
 gem 'json', '~> 1.8.3'
-gem "rmagick", "2.16.0", :require => 'RMagick'
 gem 'magic_cloud', '~> 0.0.3'
 
+gem 'dotenv-rails'
