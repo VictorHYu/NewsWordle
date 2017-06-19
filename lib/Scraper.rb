@@ -74,12 +74,7 @@ class Scraper
         hash_array.delete_if { |x| x[1] < 2 }
         hash_array.delete_if { |x| "to on of and or a in the his her by who what where when why how with for has that we".include? x[0]}
         
-        for item in hash_array
-            puts item
-        end
-        
         cloud = MagicCloud::Cloud.new(hash_array, palette: :category20, rotate: :free, scaling: :logarithmic)
-        
         
         img = cloud.draw(500,500)
         
